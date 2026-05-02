@@ -1,0 +1,51 @@
+/* TarjetaContacto.module.css */
+
+/* ─── Grid contenedor (va en el padre, ej: Productos.jsx) ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Card ─── */
+.card {
+  background: #0af0ed;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+/* ─── Cuerpo ─── */
+.cuerpo {
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.nombre {
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.telefono {
+  font-size: 0.6rem;
+  font-weight: 100;
+  color: #3d3dff;
+  margin: 0;
+}

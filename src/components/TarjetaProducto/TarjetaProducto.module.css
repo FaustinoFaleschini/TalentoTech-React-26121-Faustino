@@ -67,7 +67,7 @@
 }
 
 .nombre {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #1a1a1a;
   margin: 0;
@@ -87,11 +87,13 @@
 }
 
 /* ─── Estrellas ─── */
-.estrellas {
+.favorito {
   display: flex;
   gap: 2px;
   font-size: 0.9rem;
   color: #f5a623;
+  align-content: end;
+  vertical-align: top;
 }
 
 /* ─── Controles cantidad ─── */
@@ -149,4 +151,14 @@
 
 .btnAgregar:active {
   background: #1e1ea0;
+}
+
+.bloque {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  flex: 1;
+  border: #1a1a1a;
+  border-radius: 0cm;
 }

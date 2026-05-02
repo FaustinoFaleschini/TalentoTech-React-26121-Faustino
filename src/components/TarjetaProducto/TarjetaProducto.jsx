@@ -32,7 +32,12 @@ function TarjetaProducto({nombre, imagen, precio, stock}) {
       <img src={imagen} alt={nombre} className={styles.imagen} />
     </div>
     <div className={styles.cuerpo}>
-      <p className={styles.nombre}>{nombre}</p>
+      <div className={styles.bloque}>
+        <p className={styles.nombre}>{nombre}</p>
+        <span className={styles.favorito} onClick={marcarComoFavorito} style={{ fontSize: '20px'}} > 
+          {esFavorito ? '⭐' : '☆'}
+        </span>
+      </div>
       <p className={styles.precio}>${precio}</p>
       <p className={styles.stock}>Stock disponible: {stockProd}</p>
       <div className={styles.controles}>
