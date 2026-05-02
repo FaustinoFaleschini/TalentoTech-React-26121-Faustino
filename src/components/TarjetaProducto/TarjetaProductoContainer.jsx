@@ -1,6 +1,16 @@
 import { TarjetaProductoList } from "./TarjetaProductoList";
+import { useEffect, useState } from 'React';
 
-export function TarjetaProductoContainer() {
+export function TarjetaProductoContainer() {    
+  const [productos, setProductos] = useState([]);
+
+  useEffect(() => {
+    fetch('productos.json')
+      .then((respuesta) => respuesta.json())
+      .then((datos) => setProductos(datos))
+      .catch((error) => console.error('Error:', error));
+    }, []);
+    /*
     const productos = [ { id: 1, nombre: "NOX At10 Attack 12K", imagen: "paleta1.webp", precio: 250000, stock:10 },
                     { id: 2, nombre: "Wilson Bela LS V3", imagen: "paleta2.webp", precio: 275000, stock:10 },
                     { id: 3, nombre: "Adidas MetalBone Carbon", imagen: "paleta3.webp", precio: 300000, stock:20 },
@@ -10,8 +20,9 @@ export function TarjetaProductoContainer() {
                     { id: 7, nombre: "Adidas MetalBone SuperLigth", imagen: "paleta7.webp", precio: 180000, stock:20 },
                     { id: 8, nombre: "BullPadel Fibra Vidrio", imagen: "paleta8.webp", precio: 330000, stock:5 }
                     ];
+    */
 
-return (
+    return (
     
         <TarjetaProductoList productos={productos}/>
     
