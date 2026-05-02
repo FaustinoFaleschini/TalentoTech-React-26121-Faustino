@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* ✅ Corregido: era content-box, rompía el grid y las cards */
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* ✅ Separado: solo h1/h2/h3 centrados, los <p> quedan libres */
+h1, h2, h3 {
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ✅ Los <p> dentro de las cards no se centran forzosamente */
+p {
+  color: black;
+}

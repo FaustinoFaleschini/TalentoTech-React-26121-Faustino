@@ -1,0 +1,152 @@
+/* TarjetaProducto.module.css */
+
+/* ─── Grid contenedor (va en el padre, ej: Productos.jsx) ─── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Responsive ─── 
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+*/
+/* ─── Card ─── */
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+/* ─── Imagen ─── */
+.imagenWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imagen {
+  max-width: 75%;
+  max-height: 75%;
+  object-fit: contain;
+}
+
+/* ─── Cuerpo ─── */
+.cuerpo {
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.nombre {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.precio {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #3d3dff;
+  margin: 0;
+}
+
+.stock {
+  font-size: 0.78rem;
+  color: #666;
+  margin: 0;
+}
+
+/* ─── Estrellas ─── */
+.estrellas {
+  display: flex;
+  gap: 2px;
+  font-size: 0.9rem;
+  color: #f5a623;
+}
+
+/* ─── Controles cantidad ─── */
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.btnCantidad {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f0f0f0;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.btnCantidad:hover {
+  background: #ddd;
+}
+
+.cantidad {
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ─── Botón agregar al carrito ─── */
+.btnAgregar {
+  margin-top: auto;
+  padding: 0.55rem 0;
+  background: #3d3dff;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  width: 100%;
+}
+
+.btnAgregar:hover {
+  background: #2a2acc;
+}
+
+.btnAgregar:active {
+  background: #1e1ea0;
+}

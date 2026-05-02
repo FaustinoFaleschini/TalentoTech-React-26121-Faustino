@@ -1,0 +1,16 @@
+.enlace {
+    text-decoration: none; 
+    color: #3498db;        
+    font-weight: 600;
+    transition: all 0.3s ease; 
+    border-bottom: 2px solid transparent; 
+    
+    /* Espaciado individual */
+    display: inline-block;
+    margin: 0 15px;       
+}
+
+.enlace:hover {
+    color: #2980b9;
+    border-bottom: 2px solid #2980b9; 
+}
